@@ -1,11 +1,12 @@
 <script setup lang="ts">
-// Placeholder dashboard view – replace with real layout and widgets
+import { Button } from '@/components/ui/button'
 </script>
 
 <template>
   <div class="dashboard">
     <h1>Dashboard</h1>
     <p>Rubbie dashboard – API-driven, Hasura-style. See PRD.md for specs.</p>
+    <Button>Click me</Button>
   </div>
 </template>
 

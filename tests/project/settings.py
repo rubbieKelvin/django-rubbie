@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rubbie",
+    "tests.project.blog",
 ]
 
 MIDDLEWARE = [

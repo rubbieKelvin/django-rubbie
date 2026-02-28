@@ -1,6 +1,6 @@
 """
 Minimal Django settings for testing the rubbie app locally.
-Run from repo root with: PYTHONPATH=. uv run python test_project/manage.py runserver
+Run from repo root with: PYTHONPATH=. uv run python tests/project/manage.py runserver
 """
 import os
 
@@ -33,7 +33,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "test_project.urls"
+ROOT_URLCONF = "tests.project.urls"
 
 DATABASES = {
     "default": {

@@ -174,16 +174,16 @@ These can be broken into user stories and acceptance criteria in a separate doc 
 
 The `rubbie` app is a standalone Django app meant to be installed in Django projects. To test it in this repo without publishing:
 
-1. **Use the in-repo test project** — `test_project/` is a minimal Django site with `rubbie` in `INSTALLED_APPS` and SQLite.
+1. **Use the in-repo test project** — `tests/project/` is a minimal Django site with `rubbie` in `INSTALLED_APPS` and SQLite.
 
 2. **Run from repo root** so the local `rubbie` package is on the path:
-   - **Server:** `PYTHONPATH=. uv run python test_project/manage.py runserver`  
+   - **Server:** `PYTHONPATH=. uv run python tests/project/manage.py runserver`  
      Or: `./scripts/run-test-server.sh`
-   - **Migrations:** `PYTHONPATH=. uv run python test_project/manage.py migrate`  
-     (Run `makemigrations` from the app when you add models: `PYTHONPATH=. uv run python test_project/manage.py makemigrations rubbie`)
-   - **Tests:** `PYTHONPATH=. uv run python test_project/manage.py test rubbie`
+   - **Migrations:** `PYTHONPATH=. uv run python tests/project/manage.py migrate`  
+     (Run `makemigrations` from the app when you add models: `PYTHONPATH=. uv run python tests/project/manage.py makemigrations rubbie`)
+   - **Tests:** `PYTHONPATH=. uv run python tests/project/manage.py test rubbie`
 
-3. **Optional:** Use pytest with `DJANGO_SETTINGS_MODULE=test_project.settings` and run `pytest rubbie/` from repo root (add `pytest-django` to dev deps if you prefer pytest).
+3. **Optional:** Use pytest with `DJANGO_SETTINGS_MODULE=tests.project.settings` and run `pytest rubbie/` from repo root (add `pytest-django` to dev deps if you prefer pytest).
 
 ---
 
